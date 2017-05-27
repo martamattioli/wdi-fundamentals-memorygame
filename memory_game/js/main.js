@@ -23,12 +23,17 @@ var cards = [
 
 var cardInPlay = [];
 
+var score = 0;
+
 var checkForMatch = function() {
 	if (cardInPlay[0] === cardInPlay[1]) {
-			alert("You found a match!")
+			alert("You found a match!");
+			score += 100;
 		} else {
-			alert("Sorry, try again")
+			alert("Sorry, try again");
+			score -= 20;
 		}
+	document.getElementById('score-tracker').innerHTML = score;
 }
 
 var flipCard = function() {
@@ -55,3 +60,20 @@ var createBoard = function() {
 }
 
 createBoard();
+
+var resetCards = function() {
+	for (var i = 0; i < cards.length; i++) {
+		document.getElementsByTagName('img')[i].setAttribute('src', 'images/back.png');
+		cardInPlay.pop();
+	}
+};
+
+document.getElementById('reset-button').addEventListener('click', resetCards);
+
+var startGame = function() {
+	resetCards();
+	score = 0;
+	document.getElementById('score-tracker').innerHTML = score;
+}
+
+document.getElementById('start-new-game').addEventListener('click', startGame);

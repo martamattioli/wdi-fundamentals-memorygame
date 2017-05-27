@@ -98,6 +98,47 @@ img {
 	margin: 40px 8px;
 }
 
+button {
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 17px 30px;
+	border: solid 3px #F15B31;
+	background-color: #ffffff;
+	color: #F15B31;
+	text-transform: uppercase;
+	display: block;
+	margin: 10px auto;
+}
+
+button:hover {
+	color: #ffffff;
+	background-color: #F15B31;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.new-game-button {
+	color: #0D2C40;
+	border-color: #0D2C40;
+}
+
+.new-game-button:hover {
+	color: #ffffff;
+	background-color: #0D2C40;
+}
+
+hr {
+	border: 0;
+	border-bottom: 2px dotted #0D2C40;
+	width: 50%;
+	margin: 40px auto;
+}
+
 .copyright, .message {
 	font-family: "Raleway", sans-serif;
 	font-size: 14px;
@@ -124,5 +165,15 @@ img {
 .name {
 	color: #F15B31;
 	font-weight: 700;
+}
+
+.score-text {
+	font-family: "Raleway", sans-serif;
+	margin: 30px 0px 0px 0px;
+}
+
+.actual-score {
+	color: #F15B31;
+	font-size: 180%;
 }
 
